@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travel Planner - Activity Booking</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="activity.css">
+    <link rel="stylesheet" type="text/css" href="ActivityCard.css">
+    <style>
+        /* Style for Personal and Business buttons */
+        .toggle-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .toggle-buttons button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .personal-button {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .business-button {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .nik {
+            margin-left: 600px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        /* .nik {
+            margin-top: 30px;
+            margin-left: 700px;
+            color: #3498db;
+            display: flex;
+            justify-content: space-between;
+
+            background-color: gainsboro;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            border-color: black;
+            padding: 12px 20px;
+            font-weight: bold; */
+
+        /* Style for Personal and Business buttons */
+        .attractive-button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            /* Make the text bold */
+            color: #fff;
+            /* Text color */
+        }
+
+        .personal-button {
+            background-color: #3498db;
+            /* Blue background color */
+        }
+
+        .business-button {
+            background-color: #e74c3c;
+            /* Red background color */
+        }
+
+        /* Hover effect for buttons */
+        .attractive-button:hover {
+            opacity: 0.8;
+            /* Reduce opacity on hover for a visual effect */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">TripHive</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="main.html">Recommendations</a>
+                </li>
+                <!--            <li class="nav-item">-->
+                <!--                <a class="nav-link" href="hotel.html">Hotel Booking</a>-->
+                <!--            </li>-->
+                <li class="nav-item">
+                    <a class="nav-link" href="flight.html">Flight Booking</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Personal and Business buttons -->
+    <hr>
+    <div class="nik">
+        <button id="personalButton" onclick="showPersonalCards()"
+            class="attractive-button personal-button">Business</button>
+        <button id="businessButton" onclick="showBusinessCards()"
+            class="attractive-button business-button">Personal</button>
+    </div>
+    <hr>
+
+    <main class="container" id="activitiesContainer">
+        <hr>
+
+        <div class="card personal-card">
+            <!-- Card 1 - Personal -->
+            <header class="card__thumb">
+                <a href="#"><img
+                        src="https://www.dliteplus.com/content/dam/tlc/en/accor/dlite-plus/dlite-plus-india/global/images/website-images/homepage/Novotel.jpg" /></a>          </header>
+            <div class="card__body">
+                <div class="card__category"><a href="#">Pet</a></div>
+                <h2 class="card__title"><a href="#">a Glance of Novotel hyderabad airport!</a></h2>
+                <div class="card__subtitle">Your first choice!!</div>
+                <p class="card__description">🌟Introducing Novotel Hyderabad Airport - Where Business Meets Comfort🌟
+             the ultimate destination for a seamless and productive stay!</p>
+            </div>
+        </div>
+
+        <div class="card business-card" style="display: none;">
+            <!-- Card 1 - Business -->
+            <header class="card__thumb">
+                <a href="#"><img
+                        src="https://wallpapers.com/images/hd/hyderabad-sagar-lake-night-view-shux6dqzbwv2w740.jpg" /></a>
+            </header>
+            <div class="card__body">
+                <div class="card__category"><a href="#">CUISINE</a></div>
+                <h2 class="card__title"><a href="#">FUN ACTIVITIES-HYDERABAD</a></h2>
+                <div class="card__subtitle">The City Of Pearls!</div>
+                <p class="card__description">"Discover Hyderabad's vibrant culture through its historical sites, delicious cuisine, and bustling markets."</p>
+            </div>
+        </div>
+
+        <div class="card personal-card">
+            <!-- Card 2 - Personal -->
+            <header class="card__thumb">
+                <a href="#"><img
+                        src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/329002976.jpg?k=b3aa88c2bfbfebfe2809105ebb0c923815e49500b25aa7e0546b24879fdaaa9b&o=&hp=1" /></a>
+            </header>
+            <div class="card__body">
+                <div class="card__category"><a href="#">Pet</a></div>
+                <h2 class="card__title"><a href="#">Experience Blissful Luxury, Radisson Blu Style,Mumbai!</a></h2>
+                <div class="card__subtitle">Relax and attend meetings.</div>
+                <p class="card__description">Seamless Travel, Elevated Stay: Radisson Blu, Your Nearest Business Oasis near Mumbai Airport.</p>
+            </div>
+        </div>
+
+        <div class="card business-card" style="display: none;">
+            <!-- Card 2 - Business -->
+            <header class="card__thumb">
+                <a href="#"><img
+                        src="https://st4.depositphotos.com/1002280/40241/i/450/depositphotos_402414920-stock-photo-mumbai-city-skyline-panoramic-view.jpg" /></a>
+            </header>
+            <div class="card__body">
+                <div class="card__category"><a href="#">ADVENTURE</a></div>
+                <h2 class="card__title"><a href="#">Fun Activities-MUMBAI</a></h2>
+                <div class="card__subtitle">The City of Dreams!</div>
+                <p class="card__description">Experience Mumbai's vibrant energy by strolling along Marine Drive, exploring Bollywood, and indulging in street food delights at Juhu Beach.</p>
+            </div>
+        </div>
+
+        <div class="card personal-card">
+            <!-- Card 2 - Personal -->
+            <header class="card__thumb">
+                <a href="#"><img
+                        src="https://ak-d.tripcdn.com/images/0226y120008cd3b53FD5A_R_960_660_R5_D.jpg" /></a>
+           </header>
+            <div class="card__body">
+                <div class="card__category"><a href="#">Pet</a></div>
+                <h2 class="card__title"><a href="#">Stay Smart, Stay Relaxed, Stay with Us: Holiday Inn Express Bengaluru!</a></h2>
+                <div class="card__subtitle">Exlpore with us!</div>
+                <p class="card__description">
+                    Experience a blend of comfort and convenience at Holiday Inn Bengaluru.</p>
+            </div>
+        </div>
+
+        <div class="card business-card" style="display: none;">
+            <!-- Card 2 - Business -->
+            <header class="card__thumb">
+                <a href="#"><img
+                        src="https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2022/04/67d09-bangalore.jpg?fit=1000%2C667&ssl=1" /></a>
+            </header>
+            <div class="card__body">
+                <div class="card__category"><a href="#">travel</a></div>
+                <h2 class="card__title"><a href="#">FUN ACTIVITIES-BENGALURU</a></h2>
+                <div class="card__subtitle">The Silicon Valley of India!</div>
+                <p class="card__description">Discover Bengaluru's vibrant tech and cultural hub with visits to lush parks, eclectic markets, and innovative tech hubs, all while enjoying the city's thriving food and nightlife scene.</p>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 TripHive. All rights reserved.</p>
+        </div>
+        <script>
+            (function (w, d, s, o, f, js, fjs) {
+                w["botsonic_widget"] = o;
+                w[o] =
+                    w[o] ||
+                    function () {
+                        (w[o].q = w[o].q || []).push(arguments);
+                    };
+                (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+                js.id = o;
+                js.src = f;
+                js.async = 1;
+                fjs.parentNode.insertBefore(js, fjs);
+            })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+            Botsonic("init", {
+                serviceBaseUrl: "https://api.botsonic.ai",
+                token: "31277fb3-b341-40b6-a627-9c7c2ed115bb",
+            });
+        </script>
+    </footer>
+    <script src="activity.js"></script>
+    <script>
+        function showPersonalCards() {
+            // Show the "Personal" cards
+            document.querySelectorAll(".personal-card").forEach(card => {
+                card.style.display = "block";
+            });
+
+            // Hide the "Business" cards
+            document.querySelectorAll(".business-card").forEach(card => {
+                card.style.display = "none";
+            });
+        }
+
+        function showBusinessCards() {
+            // Show the "Business" cards
+            document.querySelectorAll(".business-card").forEach(card => {
+                card.style.display = "block";
+            });
+
+            // Hide the "Personal" cards
+            document.querySelectorAll(".personal-card").forEach(card => {
+                card.style.display = "none";
+            });
+        }
+    </script>
+</body>
+
+</html>
